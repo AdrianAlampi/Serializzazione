@@ -5,19 +5,28 @@
  */
 package serializzazione;
 
+import java.io.Serializable;
+
 /**
  *
  * @author alampi.adrian
  */
-public class Studente {
+public class Studente implements Serializable{
 
     private String nome, cognome;
     private int nRegistro;
 
-    public Studente( int nRegistro,String nome, String cognome) {
+    public Studente(int nRegistro, String nome, String cognome) {
         this.nome = nome;
         this.cognome = cognome;
         this.nRegistro = nRegistro;
     }
+
+    @Override
+    public String toString() {
+        return "Studente:  " + "nome: " + nome + ", cognome: " + cognome + ", " + nRegistro ;
+    }
+
+    
 
 }
